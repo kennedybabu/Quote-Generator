@@ -13,9 +13,11 @@ export class QuoteComponent implements OnInit {
     new Quote(1, 'babu', 'lets run with the tigers', 'me', new Date),
     new Quote(2, 'babu', 'lets run with the tigers', 'me', new Date),
     new Quote(3, 'babu', 'lets run with the tigers', 'me', new Date),
+ ]
 
-
-  ]
+ toggleDetails(index:number){
+   this.quotes[index].showDetails = !this.quotes[index].showDetails
+ }
   constructor() { }
 
   ngOnInit(): void {
