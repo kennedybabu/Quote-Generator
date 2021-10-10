@@ -1,10 +1,20 @@
 <div class="container">
     <h2>My Quotes</h2>
-    <ul>
-        <div *ngFor='let quote of quotes;let i = index'>
-            <li>{{ quote.quote }}</li>
-            <button (click)="toggleDetails(i)">Toggle Details</button>
-            <app-quote-detail *ngIf="quote.showDetails" [quote]='quote' (toDelete)="deleteQuote($event, i)"></app-quote-detail>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes;let i = index'>
+                <div>
+                    <li>{{ quote.quote }}</li>
+                    <button class="btn btn-outline-warning" (click)="toggleDetails(i)">Toggle Details</button>
+                </div>
+
+                <div *ngIf="quote.showDetails">
+                    <app-quote-detail [quote]='quote' (toDelete)="deleteQuote($event, i)"></app-quote-detail>
+                </div>               
+            </div>
         </div>
-    </ul>
+    </div>
+   
 </div>
