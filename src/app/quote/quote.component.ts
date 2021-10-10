@@ -19,6 +19,14 @@ export class QuoteComponent implements OnInit {
    this.quotes[index].showDetails = !this.quotes[index].showDetails
  }
 
+ addNewQuote(quote:any){
+   let quoteLength = this.quotes.length
+   quote.id = quoteLength +1
+   quote.dateCreated = new Date(quote.dateCreated)
+   this.quotes.push(quote)
+
+ }
+
  deleteQuote(toDelete:boolean, index:number){
    if(toDelete){
      this.quotes.splice(index, 1)

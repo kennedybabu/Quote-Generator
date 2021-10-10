@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col-md-6" id="left">
-            <app-quote-form></app-quote-form>
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
         <div class="col-md-6" id="right">
             <div *ngFor='let quote of quotes;let i = index'>
