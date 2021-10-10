@@ -10,9 +10,10 @@ export class QuoteComponent implements OnInit {
 
 
   quotes: Quote[] = [
-    {id: 1, authorName: 'babu', quote: 'lets run with the tigers', submittedBy: 'me', dateCreated: new Date, upvote: 0, downvote:0},
-    {id: 1, authorName: 'babu', quote: 'lets run with the tigers', submittedBy: 'me', dateCreated: new Date, upvote: 0, downvote:0},
-    {id: 1, authorName: 'babu', quote: 'lets run with the tigers', submittedBy: 'me', dateCreated: new Date, upvote: 0, downvote:0}
+    new Quote(1, 'babu', 'lets run with the tigers', 'me', new Date),
+    new Quote(2, 'babu', 'lets run with the tigers', 'me', new Date),
+    new Quote(3, 'babu', 'lets run with the tigers', 'me', new Date),
+
 
   ]
   constructor() { }
