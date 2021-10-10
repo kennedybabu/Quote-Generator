@@ -1,5 +1,5 @@
 <p> {{quote.submittedBy}}</p>
-<p> {{quote.upvote}}</p>
+<p> {{quote.dateCreated | date | dateCount}}</p>
 <button (click)="deleteQuote(true)">Delete Quote</button>
 
 
