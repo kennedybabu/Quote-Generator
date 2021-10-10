@@ -8,8 +8,13 @@
             <div *ngFor='let quote of quotes;let i = index'>
                <div class="quote-element my-3 p-2">
                 <div>
-                    <p>"{{ quote.quote }}"</p>
-                    <p>{{ quote.authorName }}</p>
+                    <p class="quote">"{{ quote.quote }}"</p>
+                    <div>
+                        <p class="authorName">Author: {{ quote.authorName }}</p>
+                        <div class="my-1">
+                            <button (click)="upvoteQuote(i)" class="btn btn-primary">Upvote {{quote.upvote}}</button>
+                        </div>
+                    </div>
                     <button class="btn btn-outline-warning" (click)="toggleDetails(i)">Toggle Details</button>
                 </div>
 

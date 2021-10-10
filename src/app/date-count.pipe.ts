@@ -4,6 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'dateCount'
 })
 export class DateCountPipe implements PipeTransform {
+  
 
   transform(value: any): any {
     let today: Date = new Date()

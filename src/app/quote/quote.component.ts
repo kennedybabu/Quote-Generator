@@ -29,12 +29,16 @@ export class QuoteComponent implements OnInit {
 
  deleteQuote(toDelete:boolean, index:number){
    if(toDelete){
-     let trashQuote = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+     let trashQuote = confirm(`Are you sure you want to delete '${this.quotes[index].quote}' quote?`) 
 
      if(trashQuote){
       this.quotes.splice(index, 1)
      }
    }
+ }
+
+ upvoteQuote(index:number){
+   this.quotes[index].upvote +=1
  }
   constructor() { }
 

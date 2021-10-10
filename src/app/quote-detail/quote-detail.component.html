@@ -1,5 +1,5 @@
-<p> {{quote.submittedBy}}</p>
-<p> {{quote.dateCreated | date | dateCount}}</p>
-<button (click)="deleteQuote(true)" class="btn btn-outline-danger">Delete Quote</button>
-
-
+<div class="mt-1">
+    <p> Submitted by: {{quote.submittedBy}}</p>
+    <p> Created: {{quote.dateCreated | date | dateCount}}</p>
+    <button (click)="deleteQuote(true)" class="btn btn-outline-danger">Delete Quote</button>
+</div>
