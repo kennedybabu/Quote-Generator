@@ -1,12 +1,10 @@
 <div class="container">
-    <h2>My Quotes</h2>
-    <hr>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id="left">
             <app-quote-form></app-quote-form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" id="right">
             <div *ngFor='let quote of quotes;let i = index'>
                 <div>
                     <p>{{ quote.quote }}</p>
