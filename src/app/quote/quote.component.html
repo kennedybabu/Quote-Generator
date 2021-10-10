@@ -4,16 +4,19 @@
         <div class="col-md-6" id="left">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
-        <div class="col-md-6" id="right">
+        <div class="col-md-6 px-2" id="right">
             <div *ngFor='let quote of quotes;let i = index'>
+               <div class="quote-element my-3 p-2">
                 <div>
-                    <p>{{ quote.quote }}</p>
+                    <p>"{{ quote.quote }}"</p>
+                    <p>{{ quote.authorName }}</p>
                     <button class="btn btn-outline-warning" (click)="toggleDetails(i)">Toggle Details</button>
                 </div>
 
                 <div *ngIf="quote.showDetails">
                     <app-quote-detail [quote]='quote' (toDelete)="deleteQuote($event, i)"></app-quote-detail>
-                </div>               
+                </div>  
+               </div>             
             </div>
         </div>
     </div>

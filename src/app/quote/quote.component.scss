@@ -8,7 +8,6 @@
 }
 
 #right {
-    padding-left: 30px;
     padding-top: 1rem;
 
 }
@@ -20,4 +19,14 @@
     .col-md-6 {
         padding: 0;
     }
+}
+
+button {
+    border-radius: 0;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+.quote-element {
+    border: 1px solid black;
 }

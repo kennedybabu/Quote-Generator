@@ -10,9 +10,9 @@ export class QuoteComponent implements OnInit {
 
 
   quotes: Quote[] = [
-    new Quote(1, 'babu', 'lets run with the tigers', 'me', new Date),
-    new Quote(2, 'babu', 'lets run with the tigers', 'me', new Date),
-    new Quote(3, 'babu', 'lets run with the tigers', 'me', new Date),
+    new Quote(1, 'babu', 'lets run with the tigers', 'whoseNana', new Date(2021, 3, 14)),
+    new Quote(2, 'wolver254', 'Never underestimate the allureness of darkness', 'bananaGuy', new Date),
+    new Quote(3, 'flossyCArter', 'Peeping out of my carriage, above the skies lies our true ancestral land', 'astro', new Date),
  ]
 
  toggleDetails(index:number){

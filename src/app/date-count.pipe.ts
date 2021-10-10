@@ -8,7 +8,7 @@ export class DateCountPipe implements PipeTransform {
   transform(value: any): any {
     let today: Date = new Date()
     let todayWithNoTime:any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
-    let dateDifference = Math.abs(todayWithNoTime - value)
+    let dateDifference = Math.abs(value - todayWithNoTime)
     const secondsInDay = 86400
     let dateDifferenceSeconds = dateDifference * 0.001
     let dateCounter = dateDifferenceSeconds/secondsInDay
@@ -16,7 +16,7 @@ export class DateCountPipe implements PipeTransform {
     if(dateCounter >= 1 && value > todayWithNoTime){
       return dateCounter
     } else {
-      return "Today";
+      return 0;
     }
   }
 
