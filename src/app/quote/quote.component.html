@@ -9,11 +9,11 @@
                <div class="quote-element my-3 p-2">
                 <div>
                     <p class="quote">"{{ quote.quote }}"</p>
-                    <div>
+                    <div class="popularity">
                         <p class="authorName">Author: {{ quote.authorName }}</p>
-                        <div class="my-1">
-                            <button (click)="upvoteQuote(i)" class="btn btn-primary">Upvote {{quote.upvote}}</button>
-                            <button (click)="downQuote(i)" class="btn btn-primary">DownVote {{quote.downvote}}</button>
+                        <div class="tray my-1">
+                            <button (click)="upvoteQuote(i)" class="btn btn-outline-primary">Upvote {{quote.upvote}}</button>
+                            <button (click)="downvoteQuote(i)" class="btn btn-outline-primary mx-3">DownVote {{quote.downvote}}</button>
                         </div>
                     </div>
                     <button class="btn btn-outline-warning" (click)="toggleDetails(i)">Toggle Details</button>
