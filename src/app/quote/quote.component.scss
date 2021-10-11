@@ -1,8 +1,8 @@
 #left {
     height: 100vh;
     padding-top: 1rem;
-    background-image: url(https://images.unsplash.com/photo-1544376936-e15fd353d311?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80);
-    background-position: center;
+    background-image: url(https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80);
+    background-position: bottom;
     background-size: cover;
     padding-left: 1rem;
  
@@ -58,7 +58,7 @@ button {
 .tray {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
      
 
     #downvote {

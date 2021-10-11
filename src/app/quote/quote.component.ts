@@ -10,9 +10,9 @@ export class QuoteComponent implements OnInit {
 
 
   quotes: Quote[] = [
-    new Quote(1, 'babu', 'lets run with the tigers', 'whoseNana', new Date(2021, 3, 14)),
-    new Quote(2, 'wolver254', 'Never underestimate the allureness of darkness', 'bananaGuy', new Date),
-    new Quote(3, 'flossyCArter', 'Peeping out of my carriage, above the skies lies our true ancestral land', 'astro', new Date),
+    new Quote(1, 'Carl Sagan', 'Extinction is the rule. Survival is the exception', 'bananaGuy', new Date(2021, 3, 14)),
+    new Quote(2, 'George Carlin', 'If its true that our species is alone in the universe, then Id have to say the universe aimed rather low and settled for very little.', 'Charlie Brown', new Date(2020, 10, 10)),
+    new Quote(3, 'Dylan Thomas', 'Do not go gentle into that good night, Old age should burn and rave at close of day; Rage, rage against the dying of the light.', 'bigFoot', new Date),
  ]
 
  toggleDetails(index:number){
@@ -23,11 +23,13 @@ export class QuoteComponent implements OnInit {
    let quoteLength = this.quotes.length
    quote.id = quoteLength +1
    quote.dateCreated = new Date(quote.dateCreated)
-   this.quotes.push(quote)
+   this.quotes.push(quote) 
 
- }
+}
 
- deleteQuote(toDelete:boolean, index:number){
+
+
+deleteQuote(toDelete:boolean, index:number){
    if(toDelete){
      let trashQuote = confirm(`Are you sure you want to delete '${this.quotes[index].quote}' quote?`) 
 
@@ -39,6 +41,35 @@ export class QuoteComponent implements OnInit {
 
  upvoteQuote(index:number){
    this.quotes[index].upvote +=1
+
+   let upvotes =[]
+   for(let quote of this.quotes){
+     upvotes.push(quote.upvote)
+    //  console.log(upvotes)
+
+     let mostLiked = upvotes[0]
+    //  console.log(mostLiked)
+
+     function indexOfMax(arr:any){
+     
+       let max = arr[0]
+       let maxIndex = 0
+
+       for (let i = 0; i < arr.length; i ++){
+         if(arr[i] > max){
+           maxIndex = i
+           max = arr[i]
+
+         }
+       }
+       console.log(maxIndex)
+       return maxIndex
+
+     }
+
+     indexOfMax(upvotes)
+
+   }
  }
 
  downvoteQuote(index:number){
