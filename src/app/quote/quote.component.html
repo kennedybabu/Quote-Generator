@@ -12,8 +12,10 @@
                     <div class="popularity">
                         <p class="authorName">Author: {{ quote.authorName }}</p>
                         <div class="tray my-1">
-                            <button (click)="upvoteQuote(i)" class="btn btn-outline-primary">Upvote {{quote.upvote}}</button>
-                            <button (click)="downvoteQuote(i)" class="btn btn-outline-primary mx-3">DownVote {{quote.downvote}}</button>
+                            <!-- <button  class="btn btn-outline-primary">Upvote {{quote.upvote}}</button> -->
+                            <input (click)="upvoteQuote(i)" type="image" id="upvote" name="upvote" src="https://res.cloudinary.com/dblrvhi8r/image/upload/v1633927469/icons8-thumbs-up-24_mbxcpf.png"> <span>{{ quote.upvote }}</span>
+                            <!-- <button (click)="downvoteQuote(i)" class="btn btn-outline-primary mx-3">DownVote {{quote.downvote}}</button> -->
+                            <input (click)="downvoteQuote(i)" type="image" id="downvote" name="downvote" src="https://res.cloudinary.com/dblrvhi8r/image/upload/v1633927460/3671877_down_thumbs_icon_gvgdhj.png" height="24px" width="24px"> <span> {{quote.downvote }}</span>
                         </div>
                     </div>
                     <button class="btn btn-outline-warning" (click)="toggleDetails(i)">Toggle Details</button>

@@ -42,14 +42,33 @@ button {
         font-size: 14px;
     }
 
-    &:hover {
-        box-shadow: 1px 1px 1px 1px black;
-    }
+    &:hover { 
+        box-shadow: -3px 3px 24px -7px rgba(0,0,0,0.75);
+        -webkit-box-shadow: -3px 3px 24px -7px rgba(0,0,0,0.75);
+        -moz-box-shadow: -3px 3px 24px -7px rgba(0,0,0,0.75);
+        transform: scaleZ(1.2);
+}
 
     .popularity {
         display: flex;
         justify-content: space-around;
     }
 
+}
+.tray {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+     
+
+    #downvote {
+        margin-left: 20px;
+        margin-right: 10px;
+
+    }
+
+    #upvote {
+        margin-right: 10px;
+    }
 }
 
