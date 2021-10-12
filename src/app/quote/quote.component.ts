@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Quote } from '../quote'
+
+
 
 @Component({
   selector: 'app-quote',
@@ -14,6 +16,9 @@ export class QuoteComponent implements OnInit {
     new Quote(2, 'George Carlin', 'If its true that our species is alone in the universe, then Id have to say the universe aimed rather low and settled for very little.', 'Charlie Brown', new Date(2020, 10, 10)),
     new Quote(3, 'Dylan Thomas', 'Do not go gentle into that good night, Old age should burn and rave at close of day; Rage, rage against the dying of the light.', 'bigFoot', new Date),
  ]
+
+
+ wanted:any
 
  toggleDetails(index:number){
    this.quotes[index].showDetails = !this.quotes[index].showDetails
@@ -43,33 +48,18 @@ deleteQuote(toDelete:boolean, index:number){
    let upvotes =[]
    for(let quote of this.quotes){
      upvotes.push(quote.upvote)
-
-
-     let maxIndex = 0
-
-     function indexOfMax(arr:any){     
-       let max = arr[0]
-
-       for (let i = 0; i < arr.length; i ++){
-         if(arr[i] > max){
-           max = arr[i]
-           maxIndex = i
-         }
-       }
-       return maxIndex
-     }
-
-     indexOfMax(upvotes)
-     this.styleQuote(maxIndex)
-       
-     
-    //  console.log(upvotes)
-     console.log(maxIndex)
-   }
+  }
+   let indexQuote = upvotes.indexOf(Math.max(...upvotes))
+   console.log(indexQuote)
+   this.styleQuote(this.quotes, indexQuote)
+   this.wanted = indexQuote
+   return this.wanted
  }
 
- styleQuote(index:any){
-   console.log(this.quotes[index])
+
+ styleQuote(array:any, index:number){
+  let targetQuote = array[index]
+  console.log(targetQuote)   
  }
 
  downvoteQuote(index:number){

@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-6 px-2" id="right">
             <div *ngFor='let quote of quotes;let i = index'>
-               <div class="quote-element my-3 p-2">
+               <div appMostliked class="quote-element my-3 p-2">
                 <div>
                     <p class="quote">"{{ quote.quote }}"</p>
                     <div class="popularity">
