@@ -27,8 +27,6 @@ export class QuoteComponent implements OnInit {
 
 }
 
-
-
 deleteQuote(toDelete:boolean, index:number){
    if(toDelete){
      let trashQuote = confirm(`Are you sure you want to delete '${this.quotes[index].quote}' quote?`) 
@@ -45,30 +43,24 @@ deleteQuote(toDelete:boolean, index:number){
    let upvotes =[]
    for(let quote of this.quotes){
      upvotes.push(quote.upvote)
-    //  console.log(upvotes)
 
-     let mostLiked = upvotes[0]
-    //  console.log(mostLiked)
 
-     function indexOfMax(arr:any){
-     
+     let maxIndex = 0
+
+     function indexOfMax(arr:any){     
        let max = arr[0]
-       let maxIndex = 0
 
        for (let i = 0; i < arr.length; i ++){
          if(arr[i] > max){
-           maxIndex = i
            max = arr[i]
-
+           maxIndex = i
          }
        }
-       console.log(maxIndex)
        return maxIndex
-
      }
 
      indexOfMax(upvotes)
-
+     console.log(maxIndex)
    }
  }
 
