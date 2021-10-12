@@ -60,8 +60,16 @@ deleteQuote(toDelete:boolean, index:number){
      }
 
      indexOfMax(upvotes)
+     this.styleQuote(maxIndex)
+       
+     
+    //  console.log(upvotes)
      console.log(maxIndex)
    }
+ }
+
+ styleQuote(index:any){
+   console.log(this.quotes[index])
  }
 
  downvoteQuote(index:number){
