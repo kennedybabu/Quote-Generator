@@ -1,27 +1,24 @@
-# Quotes
+# Quote Generator
+This is an application that lets a user create a quote and  post on the platform. A quote can can be upvoted or downvoted with the user being able to delete any given quote.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+## Installation
+Copy the link provided and paste to your preffered browser, ensure you have internet access to interact with the application.
 
-## Development server
+## Contributors
+Name: Kennedy Babu
+Phone_no: 0700054487
+email: kennedynjogu8@gmail.com
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Technologies used
+Javascript/Typescript
+HTML
+Scss
 
-## Code scaffolding
+## Design
+link: https://www.figma.com/file/pgXCqdlac5pJfnIyFR1tYf/Misemo-Quote?node-id=1%3A2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Future Fixes
+Current bug is that a user can submit an empty quote, future update will validate for empty user inputs
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+MIT License
